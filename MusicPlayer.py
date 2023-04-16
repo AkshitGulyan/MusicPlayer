@@ -7,7 +7,7 @@ from mutagen.mp3 import MP3
 import tkinter.ttk as ttk
 pygame.mixer.init()
 root = Tk()
-root.title("Akshit Gulyan")
+root.title("Music Player")
 root.iconbitmap(r"images n icons\play-button-arrowhead.ico")
 root.geometry("700x450")
 
@@ -24,7 +24,7 @@ global song_len
 def addsongs():
     songs = filedialog.askopenfilenames(initialdir="music", title="Choose a song", filetypes=(("mp3 files", "*.mp3"), ))
     for song in songs:
-        song=song.replace("C:/Users/akshi/OneDrive/Desktop/codeclause projects/music/", "")
+        song=song.replace("music/", "")
         song= song.replace(".mp3","")
         playlist.insert(END,song)
 
@@ -35,7 +35,7 @@ def removesongs():
 
 def play():
     song=playlist.get(ACTIVE)
-    song=f"C:/Users/akshi/OneDrive/Desktop/codeclause projects/music/{song}.mp3"
+    song=f"music/{song}.mp3"
     pygame.mixer.music.load(song)
     pygame.mixer.music.play(loops=0)
     song_time()
@@ -47,7 +47,7 @@ def next_song():
     next_one=playlist.curselection()
     next_one=next_one[0]+1
     song=playlist.get(next_one)
-    song=f"C:/Users/akshi/OneDrive/Desktop/codeclause projects/music/{song}.mp3"
+    song=f"music/{song}.mp3"
     pygame.mixer.music.load(song)
     pygame.mixer.music.play(loops=0)
     playlist.selection_clear(0,END)
@@ -60,7 +60,7 @@ def prev_song():
     prev_one=playlist.curselection()
     prev_one=prev_one[0]-1
     song=playlist.get(prev_one)
-    song=f"C:/Users/akshi/OneDrive/Desktop/codeclause projects/music/{song}.mp3"
+    song=f"music/{song}.mp3"
     pygame.mixer.music.load(song)
     pygame.mixer.music.play(loops=0)
     playlist.selection_clear(0,END)
@@ -102,7 +102,7 @@ def song_time():
         pass
     
     song=playlist.get(ACTIVE)
-    song=f"C:/Users/akshi/OneDrive/Desktop/codeclause projects/music/{song}.mp3"
+    song=f"music/{song}.mp3"
     song_info=MP3(song)
     global song_len1
     song_len=song_info.info.length
@@ -132,7 +132,7 @@ def song_time():
 def slide(x):
     #slider_label.config(text=f'{my_slider.get()} of {int(song_len1)}')
     song=playlist.get(ACTIVE)
-    song=f"C:/Users/akshi/OneDrive/Desktop/codeclause projects/music/{song}.mp3"
+    song=f"music/{song}.mp3"
     pygame.mixer.music.load(song)
     pygame.mixer.music.play(loops=0,start=my_slider.get())
 
