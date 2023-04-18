@@ -9,7 +9,7 @@ pygame.mixer.init()
 root = Tk()
 root.title("Music Player")
 root.iconbitmap(r"images n icons\play-button-arrowhead.ico")
-root.geometry("700x450")
+root.geometry("700x500")
 
 
 Text=Label(root,text="Music Player completely made in Python", font=("Helvettica"))
