@@ -238,7 +238,7 @@ vol_slide.pack()
 
 
 
-slider_label=Label(root,text='0')
-slider_label.pack()
+#slider_label=Label(root,text='0')
+#slider_label.pack()
 
 root.mainloop()
