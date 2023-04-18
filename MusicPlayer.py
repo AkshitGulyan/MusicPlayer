@@ -136,14 +136,24 @@ def slide(x):
     pygame.mixer.music.load(song)
     pygame.mixer.music.play(loops=0,start=my_slider.get())
 
-    my_slider.config(value=my_slider.get())
+    my_slider.config(text=my_slider.get())
 
 
+def volume(x):
+    volume=float(x)/100.0
+    pygame.mixer.music.set_volume(volume)
+    
+
+
+
+
+master_frame=Frame(root)
+master_frame.pack(pady=20)
 
 
 #Playlist_listbox defn.
-playlist=Listbox(root,bg='Grey',fg='black', width=80, selectbackground="green", selectforeground="black")
-playlist.pack(pady=20)
+playlist=Listbox(master_frame,bg='Grey',fg='black', width=80, selectbackground="green", selectforeground="black")
+playlist.grid(row=0,column=0)
 
 
 #Player control images desc
@@ -170,8 +180,8 @@ stop_img = ImageTk.PhotoImage(resized_image)
 
 
 #Player control frames defn.
-controls_frame=Frame(root)
-controls_frame.pack()
+controls_frame=Frame(master_frame)
+controls_frame.grid(row=1, column=0, pady=20)
 
 
 
@@ -216,10 +226,19 @@ status_bar.pack(fill=X,side=BOTTOM)
 Text=Label(status_bar,text="Made By Akshit Gulyan")
 Text.pack()
 
-my_slider=ttk.Scale(root,from_=0, to=100, orient=HORIZONTAL, value=0, command=slide, length=450)
-my_slider.pack(pady=25)
+my_slider=ttk.Scale(master_frame,from_=0, to=100, orient=HORIZONTAL, value=0, command=slide, length=450)
+my_slider.grid(row=2, column=0, pady=30)
 
-#slider_label=Label(root,text='0')
-#slider_label.pack()
+vol_frame=LabelFrame(master_frame,text="Volume Controls")
+vol_frame.grid(row=0,column=1, padx=20)
+
+vol_slide=ttk.Scale(vol_frame, from_=100, to=0, orient=VERTICAL, value=0, command=volume, length=170)
+vol_slide.set(50)
+vol_slide.pack()
+
+
+
+slider_label=Label(root,text='0')
+slider_label.pack()
 
 root.mainloop()
