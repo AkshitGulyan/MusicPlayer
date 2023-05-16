@@ -11,9 +11,15 @@ Here are some Screenshots of the Application :
 
 <img width="960" alt="2023-05-16" src="https://github.com/AkshitGulyan/CodeClause_MusicPlayer/assets/103456810/36932e66-9fc1-4872-80ab-f0f822b70859">
 
+
+
 <img width="960" alt="2023-05-16 (1)" src="https://github.com/AkshitGulyan/CodeClause_MusicPlayer/assets/103456810/62921cdf-da48-48a8-8cc7-927ebbd09d57">
 
+
+
 Here's a video of the application :
+
+
 
 https://github.com/AkshitGulyan/CodeClause_MusicPlayer/assets/103456810/553c383c-2d76-4a79-ac06-952f333cc50e
 
