@@ -7,16 +7,6 @@ It contains many options like play, pause, stop, next song, previous song, song 
 
 I've used many libraries to complete this project such as Tkinter, PyGame, Pillow, etc.
 
-Here are some Screenshots of the Application :
-
-<img width="960" alt="2023-05-16" src="https://github.com/AkshitGulyan/CodeClause_MusicPlayer/assets/103456810/36932e66-9fc1-4872-80ab-f0f822b70859">
-
-
-
-<img width="960" alt="2023-05-16 (1)" src="https://github.com/AkshitGulyan/CodeClause_MusicPlayer/assets/103456810/62921cdf-da48-48a8-8cc7-927ebbd09d57">
-
-
-
 Here's a video of the application :
 
 
